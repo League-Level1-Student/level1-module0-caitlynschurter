@@ -6,8 +6,9 @@ import org.jointheleague.graphical.robot.Robot;
 public class Houses {
 	static Robot X = new Robot();
 	static Random rand = new Random();
+
 	public static void main(String[] args) {
-		
+
 		X.moveTo(20, 575);
 		X.miniaturize();
 		X.setSpeed(50);
@@ -48,32 +49,33 @@ public class Houses {
 		}
 		X.setPenColor(color);
 		X.move(heightInt);
-		
-		//call woof
+
+		// call woof
 		drawWoof(rand.nextInt(2));
-		
+
 		X.move(heightInt);
 		X.turn(270);
 		X.setPenColor(94, 214, 43);
 		X.move(50);
 		X.turn(270);
 	}
+
 	public static void drawWoof(int woof) {
 		if (woof == 0) {
-			//flat woof
+			// flat woof
 			X.turn(90);
 			X.move(50);
 			X.turn(90);
 		}
-		
+
 		else {
-			//pointed woof
+			// pointed woof
 			X.turn(45);
 			X.move(25);
 			X.turn(90);
 			X.move(25);
 			X.turn(45);
 		}
-		
+
 	}
 }
